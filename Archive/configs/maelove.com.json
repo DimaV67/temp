@@ -1,0 +1,58 @@
+{
+  "site": "maelove.com",
+  "sitemap_url": "https://maelove.com/sitemap.xml",
+  "collections_url": "https://maelove.com/collections/all",
+  "selectors": {
+    "product_list": "a[href*='/products/']::attr(href)",
+    "name": "h1.product__title::text",
+    "price": "span.price-item--regular::text",
+    "description": "meta[name='description']::attr(content)",
+    "ingredients_link": [
+      "a[href*='/ingredients-']::attr(href)",
+      "a[href*='/details']::attr(href)"
+    ],
+    "ingredients": [
+      "div.ingredients__list li::text",
+      "h3:contains('Key Ingredients') ~ ul li::text",
+      "div[class*='ingredients'] p::text"
+    ],
+    "ratings": [
+      "span.rating-stars::attr(data-score)",
+      "div.yotpo-bottom-line span.rating::text"
+    ],
+    "review_count": [
+      "span.yotpo-bottom-line span.review-count::text",
+      "div.reviews span.count::text"
+    ],
+    "about_page": [
+      "div.about-us p::text",
+      "section.story p::text",
+      "main p::text"
+    ],
+    "usage": [
+      "h3:contains('How to Use') ~ p::text",
+      "div.product-details p:contains('Apply')::text"
+    ],
+    "storage": [
+      "p:contains('Store in')::text",
+      "div.storage-instructions p::text"
+    ],
+    "awards": [
+      "//*[contains(text(), 'Award') or contains(text(), 'Winner')]/text()"
+    ]
+  },
+  "patterns": {
+    "volume": "\\d+\\.?\\d*\\s*(fl\\s*oz|oz|ml)\\s*(?:/\\s*\\d+\\s*(ml|fl\\s*oz|oz))?",
+    "usage_section": "(?:how to use|usage|apply|directions):(.+?)(?:\\n|$)",
+    "storage_section": "(?:store|storage):(.+?)(?:\\n|$)",
+    "awards_section": "(?:winner|award|best):(.+?)(?:\\n|$)"
+  },
+  "dynamic_content": {
+    "use_playwright": true,
+    "wait_for": "div.product-grid-item"
+  },
+  "filters": {
+    "exclude_urls": ["blogs", "cart", "account"],
+    "include_about_pages": ["about", "born-at-mit", "mission"]
+  }
+}

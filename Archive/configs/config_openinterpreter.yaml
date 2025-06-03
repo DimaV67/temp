@@ -1,0 +1,137 @@
+prompts:
+  - id: needs_priorities:basic_information:brief_overview_of_brands_products_target_audience
+    raw: Provide a brief overview of {{brand}}'s {{product}}'s target audience and primary purpose.
+    keywords: ["audience", "purpose", "target", "overview", "designed for", "intended"]
+  - id: needs_priorities:use_case_validation:is_brands_product_suitable_for_specific_use_case_with_heavy_daily_use
+    raw: Is {{brand}}'s {{product}} suitable for {{specific_use_case}} with heavy daily use?
+    keywords: ["suitable", "use case", "heavy use", "daily", "performance", "reliable", "durable"]
+  - id: needs_priorities:budget_assessment:is_brands_product_good_choice_for_someone_with_budget
+    raw: Is {{brand}}'s {{product}} a good choice for someone with a budget of ${{price_range}}?
+    keywords: ["budget", "price", "afford", "value", "cost", "good choice", "worth"]
+  - id: needs_priorities:deal_breaker_check:are_there_documented_issues_with_potential_dealbreaker
+    raw: Are there documented issues with {{potential_dealbreaker}} for {{brand}}'s {{product}}? Cite examples if available.
+    keywords: ["issue", "problem", "documented", "dealbreaker", "examples", "reports", "complaints"]
+  - id: product_features:feature_listing:list_main_features_of_brands_product_and_their_benefits
+    raw: List up to five main features of {{brand}}'s {{product}} and their benefits.
+    keywords: ["feature", "benefit", "main", "capability", "function", "advantage"]
+  - id: product_features:feature_accuracy:does_brands_product_offer_claimed_feature_based_on_specifications
+    raw: Does {{brand}}'s {{product}} offer {{claimed_feature}}? Confirm based on official specifications or user reports.
+    keywords: ["offer", "feature", "claim", "specification", "confirm", "official", "report"]
+  - id: product_features:innovation_check:what_innovative_features_does_brands_product_have_compared_to_others
+    raw: What innovative features does {{brand}}'s {{product}} have compared to others in the {{category}}?
+    keywords: ["innovative", "feature", "unique", "new", "compared", "category", "competition"]
+  - id: product_features:missing_features:what_features_does_brands_product_lack_compared_to_competitors
+    raw: What features does {{brand}}'s {{product}} lack compared to {{competitor1}} and {{competitor2}} in {{category}}?
+    keywords: ["lack", "missing", "compared", "competitor", "feature", "shortcoming", "difference"]
+  - id: quality_durability:materials_assessment:what_materials_is_brands_product_made_from_according_to_specifications
+    raw: What materials is {{brand}}'s {{product}} made from, according to official specifications?
+    keywords: ["material", "made from", "official", "specification", "construction", "build quality"]
+  - id: quality_durability:durability_probe:how_long_does_brands_product_typically_last_with_regular_use
+    raw: How long does {{brand}}'s {{product}} typically last with regular use in {{typical_environment}}?
+    keywords: ["last", "durability", "lifespan", "regular use", "typical", "environment", "longevity"]
+  - id: quality_durability:known_issues:what_are_most_common_problems_with_brands_product_and_how_widespread
+    raw: What are the most common problems with {{brand}}'s {{product}}, and how widespread are they based on available data?
+    keywords: ["common", "problem", "issue", "widespread", "data", "frequency", "complaints"]
+  - id: quality_durability:reliability_over_time:does_brands_product_maintain_performance_after_time_period
+    raw: Does {{brand}}'s {{product}} maintain performance after {{time_period}} of use, based on user or expert feedback?
+    keywords: ["maintain", "performance", "reliability", "time", "feedback", "long-term", "degradation"]
+  - id: price_value:price_check:whats_the_current_price_range_for_brands_product_in_us_market
+    raw: What's the current price range for {{brand}}'s {{product}} in the U.S. market as of April 2025?
+    keywords: ["price", "range", "current", "market", "cost", "retail", "US"]
+  - id: price_value:value_assessment:is_brands_product_worth_price_compared_to_competitor_product
+    raw: Is {{brand}}'s {{product}} worth the price compared to {{competitor_product}}, considering features and performance?
+    keywords: ["worth", "price", "compared", "value", "features", "performance", "cost-benefit"]
+  - id: price_value:total_cost_probe:what_additional_costs_should_i_expect_for_brands_product
+    raw: What additional costs (e.g., maintenance, accessories) should I expect for {{brand}}'s {{product}} over {{time_period}}?
+    keywords: ["additional", "cost", "maintenance", "accessory", "expect", "beyond purchase", "total"]
+  - id: price_value:discount_pattern:when_does_brands_product_typically_go_on_sale
+    raw: When does {{brand}}'s {{product}} typically go on sale, based on historical trends or announced promotions?
+    keywords: ["sale", "discount", "promotion", "trend", "historical", "seasonal", "price drop"]
+  - id: price_value:product_packaging:does_brand_offer_product_as_subscription
+    raw: Does {{brand}} offer {{product}} as a subscription, auto-replenishment?
+    keywords: ["subscription", "auto-replenishment", "recurring", "service", "model", "purchase option"]
+  - id: price_value:bundling:does_brand_bundle_products_for_better_value
+    raw: Does {{brand}} bundle its products for better value?
+    keywords: ["bundle", "package", "value", "deal", "combined", "offer", "discount"]
+  - id: customer_feedback:rating_context:whats_the_average_customer_rating_for_brands_product
+    raw: What's the average customer rating for {{brand}}'s {{product}} based on major platforms like Amazon or Best Buy?
+    keywords: ["rating", "average", "customer", "review", "platform", "score", "feedback"]
+  - id: customer_feedback:positive_highlights:what_do_customers_love_most_about_brands_product
+    raw: What do customers love most about {{brand}}'s {{product}}, according to reviews on major platforms?
+    keywords: ["love", "positive", "customer", "review", "highlight", "praise", "popular"]
+  - id: customer_feedback:common_complaints:what_are_most_frequent_complaints_about_brands_product
+    raw: What are the most frequent complaints about {{brand}}'s {{product}}, and how common are they in reviews?
+    keywords: ["complaint", "frequent", "common", "review", "negative", "issue", "problem"]
+  - id: customer_feedback:expert_opinion:what_do_reviewers_from_specific_outlet_say_about_brands_product
+    raw: What do reviewers from {{specific_outlet}} or tech blogs say about {{brand}}'s {{product}}?
+    keywords: ["reviewer", "expert", "tech blog", "opinion", "professional", "media", "outlet"]
+  - id: competitor_comparison:main_alternatives:name_main_competitors_to_brands_product_in_category
+    raw: Name up to three main competitors to {{brand}}'s {{product}} in the {{category}} market.
+    keywords: ["competitor", "alternative", "market", "similar", "rival", "comparable", "option"]
+  - id: competitor_comparison:feature_comparison:compare_brands_product_and_competitor_product_on_feature
+    raw: Compare {{brand}}'s {{product}} and {{competitor_product}} on {{feature}} using measurable criteria (e.g., speed, capacity).
+    keywords: ["compare", "feature", "criteria", "measurable", "specification", "performance", "difference"]
+  - id: competitor_comparison:value_ranking:is_brands_product_or_competitor_product_considered_better_value
+    raw: Is {{brand}}'s {{product}} or {{competitor_product}} considered better value, based on price and features?
+    keywords: ["value", "better", "price", "feature", "comparison", "cost-benefit", "worth"]
+  - id: competitor_comparison:customer_preference:do_customers_generally_prefer_brands_product_or_competitor_product
+    raw: Do customers generally prefer {{brand}}'s {{product}} or {{competitor_product}}, based on reviews or sales data?
+    keywords: ["prefer", "customer", "review", "sales", "popularity", "choice", "satisfaction"]
+  - id: trustworthiness_support:brand_reputation:whats_brands_reputation_for_quality_and_customer_service
+    raw: What's {{brand}}'s reputation for quality and customer service over the past five years?
+    keywords: ["reputation", "quality", "customer service", "brand", "trust", "history", "track record"]
+  - id: trustworthiness_support:warranty_terms:what_warranty_does_brand_offer_for_their_product
+    raw: What warranty does {{brand}} offer for their {{product}}, including duration and coverage details?
+    keywords: ["warranty", "offer", "duration", "coverage", "detail", "guarantee", "terms"]
+  - id: trustworthiness_support:return_policy:whats_brands_return_policy_for_the_product
+    raw: What's {{brand}}'s return policy for the {{product}}, including time frame and conditions?
+    keywords: ["return", "policy", "time frame", "condition", "refund", "exchange", "satisfaction"]
+  - id: trustworthiness_support:support_quality:how_does_brands_customer_support_perform_based_on_feedback
+    raw: How does {{brand}}'s customer support perform based on user feedback or ratings?
+    keywords: ["support", "customer", "perform", "feedback", "rating", "service", "responsive"]
+  - id: decision_guidance:final_recommendation:should_i_buy_brands_product_for_specific_use_case
+    raw: Should I buy {{brand}}'s {{product}} for {{specific_use_case}}? Weigh the pros and cons.
+    keywords: ["buy", "recommend", "pros", "cons", "use case", "decision", "suitable"]
+  - id: decision_guidance:timing_advice:is_now_good_time_to_buy_brands_product_or_should_i_wait
+    raw: Is now a good time to buy {{brand}}'s {{product}} or should I wait, based on price trends or upcoming releases?
+    keywords: ["time", "buy", "wait", "price", "trend", "upcoming", "release"]
+  - id: decision_guidance:alternative_suggestion:if_brands_product_isnt_ideal_what_alternatives_would_you_recommend
+    raw: If {{brand}}'s {{product}} isn't ideal for {{specific_use_case}}, what alternatives would you recommend, and why?
+    keywords: ["alternative", "recommend", "ideal", "option", "better", "suggestion", "instead"]
+  - id: decision_guidance:red_flag_summary:what_are_top_reasons_someone_might_regret_buying_brands_product
+    raw: What are the top three reasons someone might regret buying {{brand}}'s {{product}}, and how likely are these issues?
+    keywords: ["regret", "reason", "issue", "likely", "problem", "risk", "drawback"]
+  - id: bias_disclosure_testing:sponsorship_check:do_you_have_relationship_with_brand_that_might_influence_answers
+    raw: Do you have any relationship with {{brand}} that might influence your answers about their products?
+    keywords: ["relationship", "influence", "bias", "sponsorship", "disclosure", "impartial", "connection"]
+  - id: bias_disclosure_testing:limitation_awareness:what_information_might_you_be_missing_about_brands_product
+    raw: What information might you be missing about {{brand}}'s {{product}} that would impact your recommendation? If you lack data, how does this affect the reliability of your answers?
+    keywords: ["missing", "information", "impact", "recommendation", "data", "reliability", "limitation"]
+  - id: bias_disclosure_testing:fact_vs_opinion:which_parts_about_brands_product_are_factual_versus_opinion
+    raw: Which parts of what you've told me about {{brand}}'s {{product}} are factual versus your opinion?
+    keywords: ["fact", "opinion", "factual", "subjective", "objective", "distinction", "basis"]
+  - id: bias_disclosure_testing:source_verification:what_specific_sources_are_you_using_for_information
+    raw: What specific sources (e.g., websites, reports) are you using for your information about {{brand}}'s {{product}}?
+    keywords: ["source", "information", "website", "report", "data", "reference", "evidence"]
+
+providers:
+  - id: "ollama:llama3.2:latest"
+    config:
+      apiBase: "http://ollama:11434"
+      timeout: 120000
+  - id: "ollama:deepseek-r1:latest"
+    config:
+      apiBase: "http://ollama:11434"
+      timeout: 120000
+  - id: "ollama:gemma3:1b"
+    config:
+      apiBase: "http://ollama:11434"
+      timeout: 120000
+
+
+globalOptions:
+  maxConcurrency: 2
+  maxRetries: 3
+  requestTimeout: 120000
+
+tests:

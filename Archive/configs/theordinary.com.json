@@ -1,0 +1,29 @@
+{
+  "site": "theordinary.com",
+  "sitemap_url": "https://theordinary.com/sitemap.xml",
+  "selectors": {
+    "product_list": "a.product-card::attr(href)",
+    "name": "h1.product-name::text",
+    "price": "span.price::text",
+    "description": "meta[name='description']::attr(content)",
+    "ingredients": "div.ingredients-tab p::text",
+    "ratings": "div.reviews-rating::text",
+    "review_count": "span.reviews-count::text",
+    "about_page": "div.about-section p::text"
+  },
+  "patterns": {
+    "volume": "\\d+\\.?\\d*\\s*(ml|g|oz)",
+    "ingredients_section": "ingredients:(.+?)(?:\\n|$)",
+    "usage_section": "directions:(.+?)(?:\\n|$)",
+    "storage_section": "storage:(.+?)(?:\\n|$)",
+    "awards_section": "awards:(.+?)(?:\\n|$)"
+  },
+  "dynamic_content": {
+    "use_playwright": true,
+    "wait_for": "div.product-card"
+  },
+  "filters": {
+    "exclude_urls": ["blog", "journal"],
+    "include_about_pages": ["about", "our-story"]
+  }
+}
